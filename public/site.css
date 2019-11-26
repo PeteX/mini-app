@@ -1,0 +1,35 @@
+html {
+  font-size: 16px;
+}
+
+body > div {
+  margin: 1rem auto;
+  max-width: 50rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: Gochi Hand;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+p {
+  text-align: justify;
+  font-family: Montserrat;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0000ee;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.counter {
+  margin: 3rem 0;
+  text-align: center;
+}

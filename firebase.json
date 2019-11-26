@@ -1,0 +1,43 @@
+{
+  "hosting": {
+    "target": "mini-app",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [ {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        } ]
+      }, {
+        "source": "/",
+        "headers": [ {
+          "key": "Link",
+          "value": "</counter.js>;rel=preload;as=script;crossorigin,</static/lit-element/2.2.1/lit-element-01.js>;rel=preload;as=script;crossorigin,</site.css>;rel=preload;as=style"
+        } ]
+      }, {
+        "source": "/static/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }, {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      }, {
+        "source": "404.html",
+        "headers": [ {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        } ]
+      }
+    ]
+  }
+}

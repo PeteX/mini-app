@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <link href=favicon.png rel='shortcut icon'>
+    <meta name=viewport content='width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes'>
+    <title>Demo Mini Web App</title>
+    <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Gochi+Hand|Montserrat:400,600,700&display=swap'>
+    <link rel=stylesheet href=site.css>
+    <link rel=preload href='https://miniapp.chown.org.uk/static/lit-element/2.2.1/lit-element-01.js' as=script
+      crossorigin>
+    <script type=module>
+      import './counter.js';
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>A Simple Web Application</h1>
+
+      <div class=counter>
+        <demo-counter initial=1234></demo-counter>
+      </div>
+
+      <p>This demo web application is modular but doesn’t require any kind of build system.  You just write your application in an editor, and run it.  It’s based on <a href='https://lit-element.polymer-project.org/'>lit-element</a> but lit-element normally does require a build system.  For the purposes of the demo, the application is just a counter, which increments each time the button is clicked.</p>
+
+      <p>To use this for your own projects, you first of all need to understand lit-element, of course.  With that knowledge, have a look at the <a href='counter.js'>counter.js module</a>.  It’s a completely standard use of lit-element except for the import statement at the top.  Instead of using a build system, it uses a standard Javascript import, which will run in the browser when the end user loads the page.</p>
+
+      <p>As distributed, lit-element can’t be used this way.  The modularised lit-element was created using <a href='https://rollupjs.org/'>rollup</a> but it’s quite possible to write applications without carrying out this process for yourself.  Just use the distributed <code>lit-element-01.js</code> instead, as this demo app does.  If you would like to see the process for yourself, though, clone the <a href='https://github.com/PeteX/mini-app'>GitHub project</a> and run <code>rollup -c rollup.config.js</code>.</p>
+
+      <p>If you write Javascript like this, you need to take some extra steps to make sure it loads efficiently.  There is a risk that the browser will start out only knowing about a subset of the files it needs to download.  When it has downloaded them, it will find import statements which tell it that it needs to download more files, and so on.  This would result in bad page load times, though the application would still work.</p>
+
+      <p>There are two ways to solve this, and ideally you would do both.  First of all, configure the web server to <a href='https://en.wikipedia.org/wiki/HTTP/2_Server_Push'>push</a> all the Javascript files as soon as the HTML page is loaded.  In case the browser doesn’t support pushed resources, or an intermediate cache interferes with the push, list them in the HTML file as <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content'>preload links</a>.  There is one preload link in index.html already, so you can follow that example to add more.  (It is not necessary to add preload links for resources that are referenced directly from index.html, because the browser already knows it will need to fetch them.)</p>
+
+      <p>If you just want to develop applications using this system, and you don’t want to rebuild lit-element, you can start from <a href='simple.zip'>this zip file</a>.  <b>It’s simple by name and simple by nature.</b>  Look how few files you get, compared to starting a new project with Angular or even React!</p>
+    </div>
+  </body>
+</html>

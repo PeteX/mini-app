@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "hosting-201116"
+  },
+  "targets": {
+    "hosting-201116": {
+      "hosting": {
+        "mini-app": [
+          "mini-app"
+        ]
+      }
+    }
+  }
+}
