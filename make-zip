@@ -2,6 +2,6 @@
 
 rm -rf simple public/simple.zip
 mkdir simple
-cp -a public/*.js public/index.html public/*.css public/*.png simple
+cp -a public/*.js public/index.html public/*.css public/*.png LICENSE simple
 apack public/simple.zip simple/
 rm -rf simple
