@@ -7,37 +7,39 @@ export class Counter extends LitElement {
     };
   }
 
-  static styles = css`
-    * {
-      font-family: Montserrat;
-    }
+  static get styles() {
+    return css`
+      * {
+        font-family: Montserrat;
+      }
 
-    :host {
-      display: inline-block;
-      border: 4px solid #c0c0ff;
-      border-radius: 1rem;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
+      :host {
+        display: inline-block;
+        border: 4px solid #c0c0ff;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        text-align: center;
+      }
 
-    div {
-      margin-bottom: 0.5rem;
-    }
+      div {
+        margin-bottom: 0.5rem;
+      }
 
-    button {
-      padding: 0.5rem 1rem;
-      border: 0;
-      border-radius: 0.5rem;
-      outline: none;
-      color: white;
-      background-color: #4040ff;
-      transition: background-color 0.5s;
-    }
+      button {
+        padding: 0.5rem 1rem;
+        border: 0;
+        border-radius: 0.5rem;
+        outline: none;
+        color: white;
+        background-color: #4040ff;
+        transition: background-color 0.5s;
+      }
 
-    button:hover {
-      background-color: #8080ff;
-    }
-  `;
+      button:hover {
+        background-color: #8080ff;
+      }
+    `;
+  }
 
   constructor() {
     super();
@@ -49,7 +51,6 @@ export class Counter extends LitElement {
     this.requestUpdate();
   }
 
-  // Render element DOM by returning a `lit-html` template.
   render() {
     return html`
       <div>Clicks: ${this.initial + this.count}</div>
