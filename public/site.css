@@ -14,7 +14,7 @@ h1 {
   font-size: 3rem;
 }
 
-p {
+h2, p, li {
   text-align: justify;
   font-family: Montserrat;
 }
