@@ -18,7 +18,7 @@
         "source": "/",
         "headers": [ {
           "key": "Link",
-          "value": "</counter.js>;rel=preload;as=script;crossorigin,</static/lit-element/2.2.1/lit-element-01.js>;rel=preload;as=script;crossorigin,</site.css>;rel=preload;as=style"
+          "value": "</counter.js>;rel=preload;as=script;crossorigin,</static/lit-element/2.3.1/lit-element-01.js>;rel=preload;as=script;crossorigin,</site.css>;rel=preload;as=style"
         } ]
       }, {
         "source": "/static/**",
