@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'https://miniapp.chown.org.uk/static/lit-element/2.3.1/lit-element-01.js';
+import { LitElement, html, css } from 'https://miniapp.chown.org.uk/static/lit-element/2.3.1/lit-element-02.js';
 
 export class Counter extends LitElement {
   static get properties() {

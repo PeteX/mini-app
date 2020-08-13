@@ -8,7 +8,7 @@
     <title>Demo Mini Web App</title>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Gochi+Hand|Montserrat:400,600,700&display=swap'>
     <link rel=stylesheet href=site.css>
-    <link rel=preload href='https://miniapp.chown.org.uk/static/lit-element/2.3.1/lit-element-01.js' as=script
+    <link rel=preload href='https://miniapp.chown.org.uk/static/lit-element/2.3.1/lit-element-02.js' as=script
       crossorigin>
     <script type=module src=counter.js></script>
   </head>
@@ -24,7 +24,7 @@
 
       <p>To use this for your own projects, you first of all need to understand lit-element, of course.  With that knowledge, have a look at the <a href='counter.js'>counter.js module</a>.  It’s a completely standard use of lit-element except for the import statement at the top.  Instead of using a build system, it uses a standard Javascript import, which will run in the browser when the end user loads the page.</p>
 
-      <p>As distributed, lit-element can’t be used this way.  The modularised lit-element was created using <a href='https://rollupjs.org/'>rollup</a> but it’s quite possible to write applications without carrying out this process for yourself.  Just use the pre-built lit-element-01.js from this project.</p>
+      <p>As distributed, lit-element can’t be used this way.  The modularised lit-element was created using <a href='https://rollupjs.org/'>rollup</a> but it’s quite possible to write applications without carrying out this process for yourself.  Just use the pre-built lit-element-02.js from this project.</p>
 
       <p>If you write Javascript like this, you need to take some extra steps to make sure it loads efficiently.  There is a risk that the browser will start out only knowing about a subset of the files it needs to download.  When it has downloaded them, it will find import statements which tell it that it needs to download more files, and so on.  This would result in bad page load times, though the application would still work.</p>
 
@@ -32,9 +32,9 @@
 
       <p>If you just want to develop applications using this system, and you don’t want to rebuild lit-element, you can start from <a href='simple.zip'>this zip file</a>.  <b>It’s simple by name and simple by nature.</b>  Look how few files you get, compared to starting a new project with Angular or even React!</p>
 
-      <h2>Rebuilding lit-element-01.js</h2>
+      <h2>Rebuilding lit-element-02.js</h2>
 
-      <p>There is no need to build lit-element-01.js for yourself, but if you want to, this is the process:</p>
+      <p>There is no need to build lit-element-02.js for yourself, but if you want to, this is the process:</p>
 
       <ul>
         <li>Clone the <a href='https://github.com/PeteX/mini-app'>GitHub project</a>.</li>
